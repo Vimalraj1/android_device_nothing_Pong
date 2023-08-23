@@ -25,6 +25,8 @@ MAINLINE_INCLUDE_VIRT_MODULE := false
 TARGET_GBOARD_KEY_HEIGHT := 1.1
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+TARGET_USES_AOSP_RECOVERY := true
+
 PRODUCT_NAME := aosp_Pong
 PRODUCT_DEVICE := Pong
 PRODUCT_MANUFACTURER := nothing
