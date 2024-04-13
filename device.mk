@@ -256,10 +256,13 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.kernel.post_boot.sh \
     init.qcom.post_boot.sh \
+    init.kernel.post_boot.sh \
+    init.kernel.post_boot-taro.sh \
     init.qcom.rc \
     init.qcom.recovery.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
+    init.qti.kernel.rc \
     init.qcom.usb.sh \
     init.sim.restart.sh \
     init.target.rc \

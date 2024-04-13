@@ -127,9 +127,15 @@ function configure_memory_parameters() {
 	# Set allocstall_threshold to 0 for all targets.
 	#
 
+<<<<<<< HEAD
 	# Ben.Chang@BSP, 2024/03/11, NOS-2887 +[
 	# configure_zram_parameters
     # Ben.Chang@BSP, 2024/03/11, NOS-2887 +]
+=======
+# Ben.Chang@BSP, 2024/03/11, NOS-2887 +[
+	#configure_zram_parameters
+# Ben.Chang@BSP, 2024/03/11, NOS-2887 +]
+>>>>>>> 691586a (Pong: Import kernel init scripts from stock)
 	configure_read_ahead_kb_values
 	echo 100 > /proc/sys/vm/swappiness
 
@@ -187,4 +193,7 @@ case "$chipfamily" in
 	echo "***WARNING***: Invalid chip family\n\t No postboot settings applied!!\n"
 	;;
 esac
+<<<<<<< HEAD
 
+=======
+>>>>>>> 691586a (Pong: Import kernel init scripts from stock)
