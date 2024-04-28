@@ -8,6 +8,12 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 DEVICE_PATH := device/nothing/Pong
 
+# Mainline
+include build/make/target/board/BoardConfigMainlineCommon.mk
+TARGET_NO_RECOVERY := false
+TARGET_LMKD_STATS_LOG := false
+BOARD_AVB_ROLLBACK_INDEX := 0
+
 TARGET_BUILD_FULLY_SIGN := true
 include vendor/parasite/signatures/BoardConfigSign.mk
 
