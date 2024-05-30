@@ -26,6 +26,12 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     vendor_dlkm
 
+TARGET_OTA_ADDITIONAL_OPTIONS := \
+    --enable_puffdiff=true \
+    --enable_zucchini=true \
+    --enable_lz4diff=true \
+    --enable_vabc_xor=true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
