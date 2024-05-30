@@ -40,3 +40,6 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.zram
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
