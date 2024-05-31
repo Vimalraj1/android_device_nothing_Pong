@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_Pong.mk
+    $(LOCAL_DIR)/aosp_Pong.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosp_Pong-user \
+    aosp_Pong-userdebug \
+    aosp_Pong-eng
