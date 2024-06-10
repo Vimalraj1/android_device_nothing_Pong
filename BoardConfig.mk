@@ -11,7 +11,7 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 DEVICE_PATH := device/nothing/Pong
 
 TARGET_BUILD_FULLY_SIGN := true
-include vendor/parasite-signatures/BoardConfigSign.mk
+include vendor/parasite/signatures/BoardConfigSign.mk
 
 # A/B
 AB_OTA_UPDATER := true
