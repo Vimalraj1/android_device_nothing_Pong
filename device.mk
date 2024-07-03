@@ -448,6 +448,11 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Sound Dose
+PRODUCT_PACKAGES += \
+    android.hardware.audio.sounddose-vendor-impl \
+    audio_sounddose_aoc
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
