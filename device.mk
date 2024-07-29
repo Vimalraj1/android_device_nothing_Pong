@@ -264,6 +264,12 @@ PRODUCT_PACKAGES += \
     ueventd.nt.rc \
     ueventd.qcom.rc
 
+# Kernel
+TARGET_KERNEL_DIR ?= device/nothing/Pong-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster-V3-ndk_platform.vendor \

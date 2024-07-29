@@ -93,7 +93,7 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-BOARD_BOOTCONFIG := \
+    BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
@@ -103,8 +103,11 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
-TARGET_KERNEL_SOURCE := kernel/nothing/sm8475
-TARGET_KERNEL_CONFIG := vendor/meteoric_defconfig ksu.config
+# Kernel
+TARGET_NO_KERNEL := false
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
+BOARD_PREBUILT_DTBOIMAGE := $(TARGET_KERNEL_DIR)/dtbs/dtbo.img
+
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
@@ -118,7 +121,7 @@ TARGET_MODULE_ALIASES += qca6490.ko:qca_cld3_qca6490.ko
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/qcom-battery/charging_en
 
-# Metadata
+# 	Metadata
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
