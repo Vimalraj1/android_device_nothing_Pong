@@ -365,6 +365,10 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     WifiResTarget
 
+# Platform
+PRODUCT_BOARD_PLATFORM := taro
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # PONG overlays
 PRODUCT_PACKAGES += \
     NTCarrierConfigResTarget \

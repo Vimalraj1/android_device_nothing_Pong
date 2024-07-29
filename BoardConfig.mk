@@ -121,12 +121,8 @@ TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/qcom-battery/charging
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := taro
-
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/statix/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
