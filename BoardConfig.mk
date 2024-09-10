@@ -89,7 +89,6 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 # Kernel
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
-    androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -97,12 +96,10 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
-TARGET_KERNEL_SOURCE := kernel/nothing/sm8475
-TARGET_KERNEL_CONFIG := \
-    gki_defconfig \
-    vendor/waipio_GKI.config \
-    vendor/nothing/waipio_GKI.config \
-    vendor/debugfs.config
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_NO_KERNEL := false
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
+BOARD_PREBUILT_DTBOIMAGE := $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtbs/dtbo.img
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
